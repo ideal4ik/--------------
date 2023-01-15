@@ -15,7 +15,7 @@ body {
 
 a {
     text-decoration: none;
-    color: #000000;
+    color: $color-black;
 }
 
 h1 {
@@ -23,12 +23,15 @@ h1 {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: #000000;
+    color: $color-black;
 }
 
 .wrapper {
-    max-width: 1100px;
-    margin: 0 auto;
+    @extend %wrapper-1;
+}
+
+.wrapper2 {
+    @extend %wrapper-2;
 }
 
 .clearfix {

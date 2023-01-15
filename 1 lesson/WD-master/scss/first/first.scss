@@ -1,0 +1,8 @@
+.first {
+    background-color: $color-gray;
+    &__image {
+        left: 79px;
+        position: relative;
+        padding-top: 120px;
+    }
+}
