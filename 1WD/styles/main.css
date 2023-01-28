@@ -56,31 +56,34 @@ h1, h2, h3, h4, h5, h6 {
   padding: 72px 0;
   flex: 0 0 auto;
 }
+.header .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 40px;
+}
 .header__logo {
-  float: left;
   width: 85px;
-  display: block;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
 }
 .header__logo img {
   width: 100%;
 }
-.header__nav {
-  float: right;
-}
 .header__nav ul {
   list-style: none;
+  display: flex;
+  gap: 8px 24px;
+  flex-wrap: wrap;
+  letter-spacing: 0.1em;
 }
 .header__nav li {
-  float: left;
-  margin-right: 42px;
-}
-.header__nav li:last-of-type {
-  margin-right: 0;
+  flex-shrink: 0;
 }
 .header__item {
   text-transform: uppercase;
   transition: 0.3s;
-  line-height: 38px;
 }
 .header__item:hover {
   color: #34547A;
@@ -91,18 +94,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 768px) {
-  .header__logo, .header__nav {
-    float: none;
+  .header .wrapper {
+    flex-direction: column;
+    row-gap: 34px;
   }
-  .header__logo {
-    margin: 0 auto;
-  }
-  .header__nav {
-    width: max-content;
-    margin: 16px auto 0;
-  }
-  .header__nav li {
-    margin-right: 32px;
+  .header__nav ul {
+    justify-content: center;
   }
 }
 @media (max-width: 576px) {
@@ -112,14 +109,134 @@ h1, h2, h3, h4, h5, h6 {
   .header__nav {
     text-align: center;
   }
-  .header__nav li {
-    float: none;
-    margin-right: 0;
+  .header__nav ul {
+    flex-direction: column;
   }
 }
 
 .first {
   background-color: #EEEFF1;
+  height: max-content;
+}
+.first__blocks {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  justify-content: space-between;
+}
+.first__description {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  width: 50%;
+}
+.first__description h1 {
+  line-height: 50px;
+}
+.first__image {
+  display: flex;
+}
+.first__image-wrapper {
+  max-width: 357px;
+  width: 100%;
+}
+.first__image-wrapper img {
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .first {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .first__blocks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .first__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+  }
+  .first__description h1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .first__description p {
+    text-align: center;
+  }
+  .first__image {
+    display: flex;
+  }
+  .first__image-wrapper {
+    max-width: 357px;
+    width: 100%;
+  }
+  .first__image-wrapper img {
+    max-width: 100%;
+  }
+}
+@media (max-width: 576px) {
+  .first {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .first__blocks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .first__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+  }
+  .first__description h1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+  }
+  .first__description p {
+    text-align: center;
+  }
+  .first__image {
+    display: flex;
+  }
+  .first__image-wrapper {
+    max-width: 357px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .first__image-wrapper img {
+    max-width: 75%;
+  }
+}
+.button {
+  background-color: #34547A;
+  color: #ffffff;
+  font-family: "Roboto";
+  letter-spacing: 0.1em;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 41px;
+  text-transform: uppercase;
+  width: max-content;
 }
 
 .footer {
@@ -154,6 +271,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 .footer__socials a img {
   max-width: 100%;
+}
+
+@media (max-width: 576px) {
+  .footer .wrapper {
+    flex-direction: column-reverse;
+    row-gap: 20px;
+  }
+  .footer__info {
+    text-align: center;
+    row-gap: 4px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

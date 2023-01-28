@@ -1,3 +1,111 @@
 .first {
     background-color: $color-gray;
+    height: max-content;
+    &__blocks {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        justify-content: space-between;
+    }
+    &__description {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        width: 50%;
+        h1 {
+            line-height:50px;
+
+        }
+    }
+    &__image {
+        display: flex;  
+    }
+    &__image-wrapper {
+        max-width: 357px;
+        width: 100%;
+        img {
+            max-width: 100%;
+        }
+    }
+}
+@media (max-width: $tablet) {
+    .first {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &__blocks {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &__description {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            width: 100%;
+            h1 {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+            p {
+                text-align: center;
+            }
+        }
+        &__image {
+            display: flex;  
+        }
+        &__image-wrapper {
+            max-width: 357px;
+            width: 100%;
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+}
+@media (max-width: $mobile) {
+    .first {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &__blocks {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &__description {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            width: 100%;
+            h1 {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                text-align: center;
+            }
+            p {
+                text-align: center;
+            }
+        }
+        &__image {
+            display: flex;  
+        }
+        &__image-wrapper {
+            max-width: 357px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            img {
+                max-width: 75%;
+            }
+        }
+    }
 }

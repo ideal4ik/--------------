@@ -1,0 +1,11 @@
+.button {
+    background-color: $color-button-primary;
+    color: $color-white;
+    font-family: 'Roboto';
+    letter-spacing: 0.1em;
+    border: none;
+    @include elementCentred;
+    padding: 25px 41px;
+    text-transform: uppercase;
+    width: max-content;
+}
