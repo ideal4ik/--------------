@@ -1,0 +1,40 @@
+.advantages {
+    background-color: $color-primary;
+    height: max-content;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    .wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        max-width: $wrapper-width;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}
+.advantage {
+    display: flex;
+    justify-content: space-between;
+    color: $color-white;
+    flex-direction: row;
+    gap: 20px;
+    &__number{
+        font-size: larger;
+        &__icon {
+            width: 50%;
+        }
+        &__info {
+            width: 50%;
+        }
+    }
+}
+@media (max-width: 1000px) {
+    .advantages {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}

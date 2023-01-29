@@ -9,3 +9,8 @@
     text-transform: uppercase;
     width: max-content;
 }
+@media (max-width: $mobile) {
+    .button {
+    width: 100%;
+    }
+}

@@ -1,0 +1,10 @@
+.about {
+    background-color: $color-gray;
+    @include description;
+    &__video {
+        margin-top: 57px;
+        margin-bottom: 100px;
+        align-self: stretch;
+        width: 100%;
+    }
+}
