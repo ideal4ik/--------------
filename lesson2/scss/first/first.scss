@@ -1,0 +1,20 @@
+.first {
+    display: grid;
+    grid-template-columns: 200px 200px 200px 1fr;
+    grid-template-rows: 500px 200px 200px 1fr;
+    justify-items: center;
+    align-items: center;
+    border-style: dotted;
+    border-width: 2px;
+    grid-auto-flow: column;
+    
+    &__item {
+        border-style: dotted;
+        border-width: 5px;
+    }
+}
+.size {
+    width: 1200px;
+    height: 1200px;
+    
+}
